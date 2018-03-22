@@ -3,6 +3,11 @@
 	margin: auto;
 }
 
+#title-container{
+	text-align: center;
+	width: 430px;
+	margin: auto;
+}
 
 body {
 	font-family:  'Raleway', Helvetica, sans-serif;
