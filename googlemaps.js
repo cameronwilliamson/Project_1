@@ -116,27 +116,27 @@ function init(){
             ],
             {name: 'Styled Map'});
 
-        // Create a map object, and include the MapTypeId to add
-        // to the map type control.
+        // // Create a map object, and include the MapTypeId to add
+        // // to the map type control.
+        var place = {lat: 33.671617, lng: -111.877543};
         var map = new google.maps.Map(document.getElementById('canvas'), {
-          center: {lat: 33.671617, lng: -111.877543},
+          center: place,
           zoom: 15,
           mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
                     'styled_map']
           }
         });
+        		 var marker = new google.maps.Marker({
+          position: place,
+          map: map
+          icon: 'plane.png'
+        });
+}
+      //   //Associate the styled map with the MapTypeId and set it to display.
+      //   map.mapTypes.set('styled_map', styledMapType);
+      //   map.setMapTypeId('styled_map');
+      // }
 
-        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = {
-          travel: {
-            icon: iconBase + 'parking_lot_maps.png'
-          }
-        };
-
-        //Associate the styled map with the MapTypeId and set it to display.
-        map.mapTypes.set('styled_map', styledMapType);
-        map.setMapTypeId('styled_map');
-      }
 
 google.maps.event.addDomListener(window, 'load', init);
