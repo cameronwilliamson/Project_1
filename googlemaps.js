@@ -3,7 +3,7 @@ function init(){
         // and the name to be displayed on the map type control.
         var styledMapType = new google.maps.StyledMapType(
 
-        	
+
             [
               {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
               {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
@@ -126,6 +126,13 @@ function init(){
                     'styled_map']
           }
         });
+
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          travel: {
+            icon: iconBase + 'parking_lot_maps.png'
+          }
+        };
 
         //Associate the styled map with the MapTypeId and set it to display.
         map.mapTypes.set('styled_map', styledMapType);
