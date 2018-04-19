@@ -46,7 +46,14 @@
      margin: 0 auto;
 }
  .slideshow ul {
-     margin:0;
+    width: 100%;
+    margin:0;
+}
+/* .bxslider img {
+     width: 100%;
+     height: 100%;
+ }*/
+
 }
  body {
      font-family: 'Raleway', Helvetica, sans-serif;
