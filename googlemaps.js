@@ -127,16 +127,20 @@ function init(){
                     'styled_map']
           }
         });
-        		 var marker = new google.maps.Marker({
-          position: place,
-          map: map
-          icon: 'plane.png'
-        });
-}
-      //   //Associate the styled map with the MapTypeId and set it to display.
-      //   map.mapTypes.set('styled_map', styledMapType);
-      //   map.setMapTypeId('styled_map');
-      // }
+        var image = {
+        	url: 'plane.png',
+        }
+        var marker = new google.maps.Marker({
+        position: place,
+        map: map,
+        animation: google.maps.Animation.BOUNCE,
+        icon: image
+
+});
+        //Associate the styled map with the MapTypeId and set it to display.
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+      }
 
 
 google.maps.event.addDomListener(window, 'load', init);
